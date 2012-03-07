@@ -2,14 +2,18 @@
   (:use [number_spell.core])
   (:use [clojure.test]))
 
-(deftest empty-string;; FIXME: write
-  (is false "No tests have been written."))
+(defn test-one-number [number correct_spelling]
+  (let [result (get-words-for-a-number number)] 
+  (is (= result correct_spelling) (str "Number " number 
+    " spelled incorrect: " result "!=" correct_spelling) )
+  )
+)
 
-(deftest nondigit-string;; FIXME: write
-  (is false "No tests have been written."))
+(deftest chosen-numbers-test
+  (test-one-number "1" "one")  
+  (test-one-number "10" "ten")  
+  (test-one-number "21" "twenty-one")  
+  (test-one-number "100" "one hundred")
+  (test-one-number "1001" "one thousand one") 
+)
 
-(deftest digits-and-characters;; FIXME: write
-  (is false "No tests have been written."))
-
-(deftest replace-me ;; FIXME: write
-  (is false "No tests have been written."))

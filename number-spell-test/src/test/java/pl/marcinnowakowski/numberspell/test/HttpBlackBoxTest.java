@@ -16,7 +16,8 @@ import org.junit.Before;
 import org.junit.Test;
 
 /**
- * Test 
+ * Reference test comparing results obtained with clojure code
+ * with those prodided by service http://www.tools4noobs.com/online_tools/number_spell_words/ 
  * 
  * @author marcin.nowakowski
  *
@@ -38,6 +39,12 @@ public class HttpBlackBoxTest {
 		random = new Random();
 	}
 	
+	/**
+	 * Generates 100 random numbers in range 0-999,999,999
+	 * and checks if result of number spelling is the same
+	 * for our clojure library and reference service
+	 */
+	@SuppressWarnings("deprecation")
 	@Test
 	public void test() {
 	
@@ -55,10 +62,23 @@ public class HttpBlackBoxTest {
 		assertEquals("Not equal with reference service", references, testResults); 
 	}
 	
+	/**
+	 * Get the number spelling using clojure code
+	 * 
+	 * @param number - given number
+	 * @return - number spelled with words
+	 */
     private String toWordsFromWordifiedNumber(int number) {
     	return wordified.toWords(number);
     }
 	
+	/**
+	 * Get the number spelling using reference service
+	 * http://www.tools4noobs.com/online_tools/number_spell_words/
+	 * 
+	 * @param number - given number
+	 * @return - number spelled with words
+	 */
     private String toWordsFromReferenceService(int number) {
 
     	String result = null;
@@ -79,7 +99,6 @@ public class HttpBlackBoxTest {
 	        byte[] responseBody = postMethod.getResponseBody();
 
 	        // Deal with the response.
-	        // Use caution: ensure correct character encoding and is not binary data
 	        result = new String(responseBody);
 
 	      } catch (HttpException e) {
@@ -93,6 +112,7 @@ public class HttpBlackBoxTest {
 	    	  postMethod.releaseConnection();
 	      }
 	    
+	    // Trimming result to get only word representation of the number. 
 	    if (result != null) {
 	    	result = result.substring(45);
 	    	result = result.substring(0, result.length()-6);

@@ -10,7 +10,7 @@ import number_spell.IWordifiedNumber;
 /**
  * Simple test checking chosen examples
  * 
- * @author macbeeth
+ * @author marcin.nowakowski
  *
  */
 public class CrossFuntionalTest {
@@ -29,6 +29,7 @@ public class CrossFuntionalTest {
 		    "one", wordified.toWords(1));
 		
 		assertEquals("Not equal for number: 21", 
+			//twenty one
 			"twenty-one", wordified.toWords(21));
 		
 		assertEquals("Not equal for number: 105",
