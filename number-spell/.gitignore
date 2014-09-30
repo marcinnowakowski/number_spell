@@ -6,3 +6,8 @@
 /.lein-failures
 /checkouts
 /.lein-deps-sum
+/bin/
+/.classpath
+/.lein-repl-history
+/.project
+/target/

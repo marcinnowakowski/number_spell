@@ -13,7 +13,7 @@
   (test-one-number "1" "one")  
   (test-one-number "10" "ten")  
   (test-one-number "21" "twenty-one")  
-  (test-one-number "100" "one hundred")
+  (test-one-number "101" "one hundred")
   (test-one-number "1001" "one thousand one") 
 )
 

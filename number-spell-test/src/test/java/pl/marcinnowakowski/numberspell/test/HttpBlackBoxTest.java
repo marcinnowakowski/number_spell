@@ -13,6 +13,7 @@ import org.apache.commons.httpclient.HttpException;
 import org.apache.commons.httpclient.HttpStatus;
 import org.apache.commons.httpclient.methods.PostMethod;
 import org.junit.Before;
+import org.junit.Ignore;
 import org.junit.Test;
 
 /**
@@ -22,6 +23,7 @@ import org.junit.Test;
  * @author marcin.nowakowski
  *
  */
+@Ignore
 public class HttpBlackBoxTest {
 
 	private static final String SERVICE_URL = "http://www.tools4noobs.com/online_tools/" +

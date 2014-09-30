@@ -3,11 +3,11 @@
 )
 
 (gen-interface
-  :name number_spell.IWordifiedNumber
+  :name IWordifiedNumber
   :methods [[toWords [int] String]])
 
 (gen-class
-  :name number_spell.WordifiedNumberForEnglishCardinals
+  :name WordifiedNumberForEnglishCardinals
   :implements [number_spell.IWordifiedNumber]
 )
 
