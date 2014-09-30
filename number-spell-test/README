@@ -1,0 +1,15 @@
+# number-spell
+
+Set of unit tests for java extentions of number-spell clojure library. 
+
+Tested class WordifiedNumberForEnglishCardinals.
+
+## Usage
+
+mvn test
+
+## License
+
+Copyright (C) 2012-2014 Marcin Nowakowski
+
+Distributed under the Eclipse Public License, the same as Clojure.

@@ -1,13 +1,16 @@
 # number-spell
 
-FIXME: write description
+Clojure library performing transformation: number to string representation. 
+
+Exposes interface IWordifiedNumber
+through class WordifiedNumberForEnglishCardinals
 
 ## Usage
 
-FIXME: write
+lein install
 
 ## License
 
-Copyright (C) 2012 FIXME
+Copyright (C) 2012-2014 Marcin Nowakowski
 
 Distributed under the Eclipse Public License, the same as Clojure.
